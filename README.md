@@ -158,6 +158,6 @@ Follow the steps provided in the link to [Build and program the application](htt
 
 ## 7. Run the demo<a name="step7">
 
-- After programming the board, the expected application behavior is shown in the below [video](https://github.com/MicrochipTech/RNBD451_BLE_HEART_RATE_SENSOR/blob/main/docs/demo.gif).
+- After programming the board, the expected application behavior is shown in the below [video](https://github.com/MicrochipTech/RNBD451_BLE_TEMPERATURE_SENSOR/blob/main/docs/demo.gif).
 
 ![Alt Text](docs/demo.gif)	
