@@ -125,6 +125,8 @@ This application demonstrates how to add the RNBD451 with PIC24 to implement a B
 
 - Download this repository and add the Header and Source files from "app_tempHum13" & "rnbd" folders from drivers folder.
 
+![](docs/DRIVERS.png)
+
 - Copy the file [main.c](https://github.com/MicrochipTech/RNBD451_BLE_TEMPERATURE_SENSOR/blob/main/firmware/PIC24_RNBD451_TH.X/main.c) and replace it.
 		
 	- In this file the RNBD_TempHum_example() function initializes the RNBD451 Module and sends the temperature value to the MBD App.
