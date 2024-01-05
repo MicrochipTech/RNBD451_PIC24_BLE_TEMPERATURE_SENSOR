@@ -1,4 +1,4 @@
-# RNBD451 BLE TEMPERATURE SENSOR
+# RNBD451 WITH PIC24FJ64GU205 AS BLE TEMPERATURE SENSOR
 
 <img src="docs/IoT-Made-Easy-Logo.png" width=100>
 
@@ -33,7 +33,7 @@ Checkout the <a href="https://microchipsupport.force.com/s/" target="_blank">Tec
 
 ### Getting started with RNBD451 Plug and Temperature Sensor
 
-This application demonstrates how to add the RNBD451 with PIC24 to implement a BLE temperature sensor using TEMP&HUM 13 CLICK. The RN commands are sent from the PIC24FJ64GU205 CURIOSITY NANO BOARD to establish the Temperature sensor application, which can be viewed in the MBD application.
+This application shows how to use the RNBD451 along with the PIC24FJ64GU205 to develop a BLE temperature sensor application with TEMP&HUM 13 CLICK. The PIC24FJ64GU205 Curiosity Nano Development Board sends RN instructions to establish the Temperature sensor application, which can be monitored in the Microchip Bluetooth Data application.
 
 ![](docs/app.png)
 
@@ -48,7 +48,7 @@ This application demonstrates how to add the RNBD451 with PIC24 to implement a B
 
 ## 3. Hardware Setup<a name="step3">
 
-- Connect the TEMP&HUM 13 CLICK Board to the Mikro Bus 1 and RNBD451 Add-on Board to the Mikro Bus 2 and connect the PIC24FJ64GU205 CURIOSITY NANO DEVELOPMENT BOARD as shown below.
+- Connect the TEMP&HUM 13 CLICK Board to the Mikro Bus 1, RNBD451 Add-on Board to the Mikro Bus 2 and connect the PIC24FJ64GU205 CURIOSITY NANO DEVELOPMENT BOARD as shown below.
 
 ![](docs/hardware.png)
 
@@ -79,53 +79,99 @@ This application demonstrates how to add the RNBD451 with PIC24 to implement a B
 
 **Step 1** - Connect the PIC24FJ64GU205 CURIOSITY NANO DEVELOPMENT BOARD to the device/system using a micro-USB cable.
 
+- Follow the steps for creating new project for PIC24FJ64GU205.
+
+![](docs/np1.png)
+
+![](docs/np2.png)
+
+![](docs/np3.png)
+
+![](docs/np4.png)
+
 **Step 2** - Open the MPLAB Code Configurator and follow the steps as shown below.
+
+- Choose MCC Classic while opening the MCC Code Configurator.
 
 ![](docs/project_resources.png)
 
-**Step 3** - In Device Resources, go to Libraries->Foundation Services->I2CSIMPLE and add the I2CSIMPLE component to configure as shown below.
+**Step 3** - In Device Resources, go to Libraries->Foundation Services->I2CSIMPLE and add the I2CSIMPLE component to configure.
 
 ![](docs/I2CSIMPLE.png)
 
-**Step 4** - In Project Resources, select the 16 bit I2CMASTER component from Foundation Services and configure as shown below.
+**Step 4** - In Project Resources, select the 16 bit I2CMASTER component from Foundation Services and configure.
 
 ![](docs/16bitI2CMASTER.png)
 
-**Step 5** - In Project Resources, select the I2C1 component from Peripherals and configure as shown below.
+**Step 5** - In Project Resources, select the I2C1 component from Peripherals and configure.
 
 ![](docs/I2C1.png)
 
-**Step 6** - In Device Resources, go to Libraries->Foundation Services->DELAY and add the DELAY component to configure as shown below.
+**Step 6** - In Device Resources, go to Libraries->Foundation Services->DELAY and add the DELAY component to configure.
 
 ![](docs/delay.png)
 
-**Step 7** - In Device Resources, go to Libraries->Foundation Services->UART and add the UART component to configure as shown below.
+**Step 7** - In Device Resources, go to Libraries->Foundation Services->UART and add the UART component to configure.
 
 ![](docs/uart.png)
 
-**Step 8** - In Project Resources, select the UART1 component from Peripherals and configure as shown below.
+**Step 8** - In Project Resources, select the UART1 component from Peripherals and configure.
 
 ![](docs/UART1.png)
 
-**Step 9** - In Project Resources, select the UART2 component from Peripherals and configure as shown below.
+**Step 9** - In Project Resources, select the UART2 component from Peripherals and configure.
 
 ![](docs/UART2.png)
 
-**Step 10** - In Project Resources, select the Pin Module component from Systems and configure as shown below.
+**Step 10** - In Project Resources, select the Pin Module component from Systems and configure.
 
-![](docs/pinmodule.png)
-
-- Refer the PIN Manager : Grid View and configure as shown below.
+- Refer the PIN Manager : Grid View and configure.
 
 ![](docs/gridview.png)
+
+- Refer the pin module and configure.
+
+![](docs/pinmodule.png)
 
 **Step 11** - [Generate](https://onlinedocs.microchip.com/pr/GUID-A5330D3A-9F51-4A26-B71D-8503A493DF9C-en-US-1/index.html?GUID-9C28F407-4879-4174-9963-2CF34161398E) the code.
 
 **Step 12** - Change the following Code as mentioned below.
 
-- Download this repository and add the Header and Source files from "app_tempHum13" & "rnbd" folders from drivers folder.
+- From the unzipped folder of this repository copy the folder "app_tempHum13" and "rnbd" from drivers to the folder firmware/your_project.x under your MPLAB application project and add the Header (app_temphum13.h, rnbd.h, rnbd_interface.h) and Source file (app_temphum13.c, rnbd.c, rnbd_interface.c).
 
 ![](docs/DRIVERS.png)
+
+- In the project explorer, Right click on folder Header Files and add a sub folder "app_tempHum13" and "rnbd" by selecting “Add Existing Items from Folders…”
+
+![](docs/header_add.png)
+
+- Click on “Add Folder…” button.
+
+![](docs/header_add2.png)
+
+- Select the "app_tempHum13" and "rnbd" folder and select “Files of Types” as Header Files then click on “Add” button to add the selected folder.
+
+![](docs/header_add4.png)
+ 
+- The header files gets added to your project.
+
+![](docs/header_add5.png)
+
+- In the project explorer, Right click on folder Source Files and add a sub folder "app_tempHum13" and "rnbd" by selecting “Add Existing Items from Folders…”.
+
+![](docs/source_add.png)
+
+- Click on “Add Folder…” button
+
+![](docs/source_add2.png)
+
+- Select the "app_tempHum13" and "rnbd" folder and select “Files of Types” as Source Files then click on “Add” button to add the selected folder.
+
+![](docs/source_add4.png)
+
+- The source files gets added to your project.
+
+![](docs/source_add5.png)
 
 - Copy the file [main.c](https://github.com/MicrochipTech/RNBD451_BLE_TEMPERATURE_SENSOR/blob/main/firmware/PIC24_RNBD451_TH.X/main.c) and replace it.
 		
@@ -134,6 +180,8 @@ This application demonstrates how to add the RNBD451 with PIC24 to implement a B
 **Step 13** - Clean and build the project. To run the project, select "Make and program device" button.
 	
 **Step 14** - The Application Serial logs can be viewed in [TERA TERM](https://download.cnet.com/Tera-Term/3000-2094_4-75766675.html) COM PORT.
+
+- Baud Rate: 9600 
 
 ![](docs/TERATERM.png)
 	
