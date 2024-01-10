@@ -1,0 +1,58 @@
+{
+    "metaDataVersion": "1.0.0",
+    "category": "com.microchip.ide.project",
+    "content": {
+        "metaDataVersion": "1.3.0",
+        "name": "com.microchip.mplabx.project.RNBD451_BLE_HEART_RATE_SENSOR",
+        "version": "1.0.0",
+        "displayName": "RNBD451 WITH PIC24FJ64GU205 AS BLE TEMPERATURE SENSOR",
+        "projectName": "RNBD451_PIC24_BLE_TEMPERATURE_SENSOR",
+        "shortDescription": "IoT Made Easy! - This application demonstrates how to add the RNBD451 Add-on Board with PIC24 via UART and to implement a temperature sensor using TEMP&HUM 13 CLICK.",
+        "ide": {
+            "name": "MPLAB X",
+            "semverRange": ">=6.10"
+        },
+        "compiler": [
+            {
+                "name": "XC16",
+                "semverRange": "^2.00"
+            }
+        ],
+        "dfp": {
+            "name": "PIC24F-GP-GU_DFP",
+            "semverRange": "^1.1.227"
+        },
+        "configurator": {
+            "name": "MCC",
+            "semverRange": ">=5.6.1"
+        },
+        "device": {
+            "metaDataVersion": "1.0.0",
+            "category": "com.microchip.portal.contentRef",
+            "content": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.device",
+                "name": "RNBD451",
+                "versionRange": "*"
+            }
+        },
+        "author": "Roshan Raj",
+        "peripherals": [
+            "SERCOM"
+        ],
+        "keywords": [
+             "IoT","BLE","MPLAB X","XC316","SERCOM","MCC","Wireless","Development Tool","Bluetooth","RNBD451", "Bluetooth","Wireless", "Wireless Communication", "Communication"
+        ],
+        "additionalData": {
+            "longDescription": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.portal.fileRef",
+                "content": {
+                    "metaDataVersion": "1.0.0",
+                    "fileName": "./README.md",
+                    "mimeType": "text/markdown"
+                }
+            }
+        }
+    }
+}

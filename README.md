@@ -5,8 +5,8 @@
 
 > "IoT Made Easy!" 
 
-Devices: **| RNBD451 |**<br>
-Features: **| BLE | HEART RATE |**
+Devices: **| RNBD451 | PIC24FJ64GU205 |**<br>
+Features: **| BLE |**
 
 
 ## ⚠ Disclaimer
@@ -31,7 +31,7 @@ Checkout the <a href="https://microchipsupport.force.com/s/" target="_blank">Tec
 
 ## 1. Introduction<a name="step1">
 
-### Getting started with RNBD451 Plug and Temperature Sensor
+### Getting started with adding RNBD451 to PIC24FJ64GU205
 
 This application shows how to use the RNBD451 along with the PIC24FJ64GU205 to develop a BLE temperature sensor application with TEMP&HUM 13 CLICK. The PIC24FJ64GU205 Curiosity Nano Development Board sends RN instructions to establish the Temperature sensor application, which can be monitored in the Microchip Bluetooth Data application.
 
